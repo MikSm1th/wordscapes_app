@@ -5,7 +5,6 @@ import itertools
 
 def main():
     st.header("A simple wordscapes app")
-    st.subheader("A demo on how to use Streamlit")
     
 
 if __name__ == "__main__":
