@@ -15,10 +15,12 @@ if __name__ == "__main__":
 with open("words.txt") as dict_file:
     valid_words = [''.join(line.strip().split()).lower() for line in dict_file if len(line) <= 12]
 
-
+#letters = input('What are your letters?:')
 letters = st.text_input(label='What are your letters?', value='')
-word_length = st.number_input(label='How long is your word?', min_value=0, max_value=20, value=0)
-
+str_length = st.text_input(label='How long is your word?', value='')
+int_length = int(str_length)
+word_length =  int_length + 1
+#for word_length in range(3, len(letters) + 1):
 words = set()
 for possible_word_tuple in itertools.permutations(letters, word_length):
     possible_word_string = ''.join(possible_word_tuple)
